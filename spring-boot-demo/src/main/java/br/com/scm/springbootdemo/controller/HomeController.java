@@ -1,15 +1,21 @@
 package br.com.scm.springbootdemo.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import br.com.scm.springbootdemo.model.User;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@ResponseBody
+@RestController
 public class HomeController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home() {
         return "Hello World!";
+    }
+
+    @GetMapping("/user")
+    public User user() {
+        User user = new User("1", "Name 1", "email1@one.com");
+
+        return user;
     }
 }
