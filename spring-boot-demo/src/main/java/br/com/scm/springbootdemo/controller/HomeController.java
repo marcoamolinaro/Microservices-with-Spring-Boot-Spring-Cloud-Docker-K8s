@@ -2,6 +2,7 @@ package br.com.scm.springbootdemo.controller;
 
 import br.com.scm.springbootdemo.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,5 +18,11 @@ public class HomeController {
         User user = new User("1", "Name 1", "email1@one.com");
 
         return user;
+    }
+
+    @GetMapping("/{id}/{id2}")
+    public String pathVariable(@PathVariable String id,
+                               @PathVariable("id2") String name) {
+        return "The path Variable is " + id + " " + name;
     }
 }
