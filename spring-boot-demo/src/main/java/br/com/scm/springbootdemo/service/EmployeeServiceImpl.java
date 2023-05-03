@@ -1,5 +1,6 @@
 package br.com.scm.springbootdemo.service;
 
+import br.com.scm.springbootdemo.error.EmployeeNotFoundException;
 import br.com.scm.springbootdemo.model.Employee;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .stream()
                 .filter(employee -> employee.getEmployeeId().equalsIgnoreCase(id))
                 .findFirst()
-                .get();
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee id not found " + id));
     }
 }
