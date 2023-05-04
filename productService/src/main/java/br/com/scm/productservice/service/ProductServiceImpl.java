@@ -1,6 +1,7 @@
 package br.com.scm.productservice.service;
 
 import br.com.scm.productservice.entity.Product;
+import br.com.scm.productservice.exception.ProductServiceCustomException;
 import br.com.scm.productservice.model.ProductRequest;
 import br.com.scm.productservice.model.ProductResponse;
 import br.com.scm.productservice.repository.ProductRepository;
@@ -39,7 +40,8 @@ public class ProductServiceImpl implements ProductService {
         log.info("Get product for id: " + productId);
 
         Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product with id " + productId + " not found"));
+                .orElseThrow(() -> new ProductServiceCustomException("Product with id " + productId + " not found",
+                        "PRODUCT_NOT_FOUND"));
 
         ProductResponse productResponse = new ProductResponse();
 
