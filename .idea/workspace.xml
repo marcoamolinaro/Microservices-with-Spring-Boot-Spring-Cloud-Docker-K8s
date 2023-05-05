@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2afc20ba-9905-4cac-aded-84c461574c7e" name="Changes" comment="Add reduceQuantity API in ProductService">
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/br/com/scm/orderservice/external/client/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/br/com/scm/orderservice/OrderserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/br/com/scm/orderservice/OrderserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/br/com/scm/orderservice/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/br/com/scm/orderservice/service/OrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductServiceApplication" />
         <item itemvalue="Application.OrderserviceApplication" />
+        <item itemvalue="Application.ProductServiceApplication" />
         <item itemvalue="Application.ConfigserverApplication" />
         <item itemvalue="Application.ServiceRegistryApplication" />
       </list>
