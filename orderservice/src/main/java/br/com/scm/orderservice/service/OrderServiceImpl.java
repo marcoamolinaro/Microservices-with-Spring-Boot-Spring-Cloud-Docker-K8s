@@ -1,7 +1,9 @@
 package br.com.scm.orderservice.service;
 
 import br.com.scm.orderservice.entity.Order;
+import br.com.scm.orderservice.external.client.PaymentService;
 import br.com.scm.orderservice.external.client.ProductService;
+import br.com.scm.orderservice.external.request.PaymentRequest;
 import br.com.scm.orderservice.model.OrderRequest;
 import br.com.scm.orderservice.repository.OrderRepository;
 import lombok.extern.log4j.Log4j2;
@@ -19,6 +21,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private PaymentService paymentService;
 
     @Override
     public long placeOrder(OrderRequest orderRequest) {
@@ -43,6 +48,28 @@ public class OrderServiceImpl implements OrderService {
         orderRepository.save(order);
 
         long orderId = order.getId();
+
+        log.info("Calling PaymentService to complete the payment ");
+
+        PaymentRequest paymentRequest = PaymentRequest.builder()
+                .orderId(orderId)
+                .paymentMode(orderRequest.getPaymentMode())
+                .amount(orderRequest.getTotalAmount())
+                .build();
+
+        String orderStatus = null;
+
+        try {
+            paymentService.doPayment(paymentRequest);
+            log.info("Payment done Successfully. Changing the Order status to PLACED");
+            orderStatus = "PLACED";
+        } catch (Exception ex) {
+            log.info("Error occurred in payment. Changing order status to PAYMENT_FAILED");
+            orderStatus = "PAYMENT_FAILED";
+        }
+
+        order.setOrderStatus(orderStatus);
+        orderRepository.save(order);
 
         log.info("Order Placed Successfully with Order Id {}", orderId);
 

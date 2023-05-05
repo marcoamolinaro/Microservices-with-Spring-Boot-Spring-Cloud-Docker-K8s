@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/payments")
 public class PaymentController {
-
     @Autowired
     private PaymentService paymentService;
     @PostMapping
