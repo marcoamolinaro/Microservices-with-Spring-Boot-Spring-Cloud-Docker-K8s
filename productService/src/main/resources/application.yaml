@@ -13,8 +13,6 @@ spring:
       ddl-auto: update
   application:
     name: PRODUCT-SERVICE
-  config:
-    import: configserver:http://localhost:9296
 
 #eureka:
 #  instances:
