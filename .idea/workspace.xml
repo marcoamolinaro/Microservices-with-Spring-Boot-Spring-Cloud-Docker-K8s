@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2afc20ba-9905-4cac-aded-84c461574c7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/orderservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/productService/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="2afc20ba-9905-4cac-aded-84c461574c7e" name="Changes" comment="Add reduceQuantity API in ProductService">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +36,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Marco A Molinaro/Desenvolvedor/Udemy/Microservices-with-Spring-Boot-Spring-Cloud-Docker-K8s/productService",
     "project.structure.last.edited": "Project",
@@ -129,6 +128,21 @@
       <option name="presentableId" value="Default" />
       <updated>1683245481773</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add reduceQuantity API in ProductService">
+      <created>1683250610547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683250610547</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add reduceQuantity API in ProductService">
+      <created>1683250658311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683250658311</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,5 +155,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add reduceQuantity API in ProductService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add reduceQuantity API in ProductService" />
   </component>
 </project>
