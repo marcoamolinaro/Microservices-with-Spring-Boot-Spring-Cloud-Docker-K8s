@@ -26,6 +26,7 @@ replay_pid*
 
 ### IntelliJ IDEA ###
 .idea
+.idea/*.xml
 *.iws
 *.iml
 *.ipr
