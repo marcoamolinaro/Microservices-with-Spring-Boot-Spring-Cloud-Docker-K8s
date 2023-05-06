@@ -1,10 +1,12 @@
 package br.com.scm.orderservice.service;
 
 import br.com.scm.orderservice.entity.Order;
+import br.com.scm.orderservice.exception.CustomException;
 import br.com.scm.orderservice.external.client.PaymentService;
 import br.com.scm.orderservice.external.client.ProductService;
 import br.com.scm.orderservice.external.request.PaymentRequest;
 import br.com.scm.orderservice.model.OrderRequest;
+import br.com.scm.orderservice.model.OrderResponse;
 import br.com.scm.orderservice.repository.OrderRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,5 +76,22 @@ public class OrderServiceImpl implements OrderService {
         log.info("Order Placed Successfully with Order Id {}", orderId);
 
         return orderId;
+    }
+
+    @Override
+    public OrderResponse getOrderDetails(long orderId) {
+        log.info("Get Order Details for Order Id {}", orderId);
+
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new CustomException("Order not found for id: " + orderId, "NOT_FOUND", 404));
+
+        OrderResponse orderResponse = OrderResponse.builder()
+                .amount(order.getAmount())
+                .orderDate(order.getOrderDate())
+                .orderId(order.getId())
+                .orderStatus(order.getOrderStatus())
+                .build();
+
+        return orderResponse;
     }
 }
