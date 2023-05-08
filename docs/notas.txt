@@ -1,0 +1,7 @@
+https://dev-83779790.okta.com/
+
+ 
+
+client id: 0oa9g1nux1ks7sygj5d7
+
+Secret: TMiuNDkW8zJ36DUIkwh-V8xxZ3QAGLiSTrURlCK6
