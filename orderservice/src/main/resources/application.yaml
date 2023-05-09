@@ -30,7 +30,7 @@ spring:
             clientSecret: TMiuNDkW8zJ36DUIkwh-V8xxZ3QAGLiSTrURlCK6
         provider:
           okta:
-            issuerUri: https://dev-83779790.okta.com/oauth2/default
+            issuer-uri: https://dev-83779790.okta.com/oauth2/default
 
 resilience4j:
   circuitbreaker:
