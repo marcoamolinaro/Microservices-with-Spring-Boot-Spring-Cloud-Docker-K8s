@@ -17,7 +17,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .antMatchers("/payments/**")
-                                .hasAuthority(SCOPE_"internal")
+                                .hasAuthority("SCOPE_internal")
                                 .anyRequest()
                                 .authenticated())
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
