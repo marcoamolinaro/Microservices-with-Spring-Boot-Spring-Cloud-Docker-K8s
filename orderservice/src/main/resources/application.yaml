@@ -24,10 +24,10 @@ spring:
         registration:
           internal-client:
             provider: okta
-            authorizationGrantType: client_credentials
+            authorization-grant-type: client_credentials
             scope: internal
-            clientId: 0oa9g1nux1ks7sygj5d7
-            clientSecret: TMiuNDkW8zJ36DUIkwh-V8xxZ3QAGLiSTrURlCK6
+            client-id: 0oa9g1nux1ks7sygj5d7
+            client-secret: TMiuNDkW8zJ36DUIkwh-V8xxZ3QAGLiSTrURlCK6
         provider:
           okta:
             issuer-uri: https://dev-83779790.okta.com/oauth2/default

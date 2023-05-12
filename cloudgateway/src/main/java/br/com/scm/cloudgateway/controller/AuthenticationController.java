@@ -30,7 +30,7 @@ public class AuthenticationController {
                 .userId(oidcUser.getEmail())
                 .accessToken(client.getAccessToken().getTokenValue())
                 .refreshToken(client.getRefreshToken().getTokenValue())
-                .expireAt(client.getAccessToken().getExpiresAt().getEpochSecond())
+                .expiresAt(client.getAccessToken().getExpiresAt().getEpochSecond())
                 .authorityList(oidcUser.getAuthorities().
                         stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
                 .build();
